@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block start %}
+    <h1>This is index page</h1>
+    {{peoples}}
+    <table>
+        <tr>
+          <th>S.no</th>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+        {% for people in peoples %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{people.name}}</td>
+          <td>{{people.age}}</td>
+        </tr>
+
+        {% endfor %}
+        
+      </table>
+      
+{% endblock %}
